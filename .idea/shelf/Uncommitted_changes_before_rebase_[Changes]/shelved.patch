@@ -1,0 +1,130 @@
+Index: src/main/kotlin/Homework_1/Input.kt
+===================================================================
+diff --git a/src/main/kotlin/Homework_1/Input.kt b/src/main/kotlin/Homework_1/Input.kt
+deleted file mode 100644
+--- a/src/main/kotlin/Homework_1/Input.kt	(revision 03f4b1c5ce78ac78ac828ea9b9b85b75c0d56ac0)
++++ /dev/null	(revision 03f4b1c5ce78ac78ac828ea9b9b85b75c0d56ac0)
+@@ -1,12 +0,0 @@
+-package Homework_1
+-
+-object Input {
+-    fun writeInt(size: Int = 100): Int {
+-        val number = readln().toIntOrNull()
+-        return if (number != null && number < 100) {
+-            number
+-        } else writeInt()
+-
+-    }
+-
+-}
+\ No newline at end of file
+Index: src/main/kotlin/Homework_1/tasks/1.kt
+===================================================================
+diff --git a/src/main/kotlin/Homework_1/tasks/1.kt b/src/main/kotlin/Homework_1/tasks/1.kt
+deleted file mode 100644
+--- a/src/main/kotlin/Homework_1/tasks/1.kt	(revision 03f4b1c5ce78ac78ac828ea9b9b85b75c0d56ac0)
++++ /dev/null	(revision 03f4b1c5ce78ac78ac828ea9b9b85b75c0d56ac0)
+@@ -1,20 +0,0 @@
+-package org.example.Homework_1
+-
+-import Homework_1.Input
+-
+-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+-
+-
+-fun main() {
+-
+-    val height = Input.writeInt()
+-    val width = Input.writeInt()
+-
+-    val p = 2 * (height+width)
+-    val s = height*width
+-
+-    println("Perimeter: $p, Square: $s")
+-
+-
+-}
+Index: src/main/kotlin/Homework_1/tasks/3.kt
+===================================================================
+diff --git a/src/main/kotlin/Homework_1/tasks/3.kt b/src/main/kotlin/Homework_1/tasks/3.kt
+deleted file mode 100644
+--- a/src/main/kotlin/Homework_1/tasks/3.kt	(revision 03f4b1c5ce78ac78ac828ea9b9b85b75c0d56ac0)
++++ /dev/null	(revision 03f4b1c5ce78ac78ac828ea9b9b85b75c0d56ac0)
+@@ -1,11 +0,0 @@
+-package Homework_1.tasks
+-
+-import Homework_1.Input
+-
+-fun main(){
+-    val valueN = Input.writeInt()
+-    for(i in 1..10){
+-        println("$valueN*$i = ${valueN*i}")
+-    }
+-
+-}
+\ No newline at end of file
+Index: src/main/kotlin/Homework_1/tasks/4.kt
+===================================================================
+diff --git a/src/main/kotlin/Homework_1/tasks/4.kt b/src/main/kotlin/Homework_1/tasks/4.kt
+deleted file mode 100644
+--- a/src/main/kotlin/Homework_1/tasks/4.kt	(revision 03f4b1c5ce78ac78ac828ea9b9b85b75c0d56ac0)
++++ /dev/null	(revision 03f4b1c5ce78ac78ac828ea9b9b85b75c0d56ac0)
+@@ -1,18 +0,0 @@
+-package Homework_1.tasks
+-
+-import Homework_1.Input
+-
+-fun fibonacci(num: Int): Int {
+-    return when (num) {
+-        0 -> 0
+-        1 -> 1
+-        else -> fibonacci(num - 1) + fibonacci(num - 2)
+-    }
+-}
+-
+-fun main() {
+-    val number = Input.writeInt()
+-
+-    val sum = fibonacci(number)
+-    println(sum)
+-}
+\ No newline at end of file
+Index: src/main/kotlin/Homework_1/tasks/2.kt
+===================================================================
+diff --git a/src/main/kotlin/Homework_1/tasks/2.kt b/src/main/kotlin/Homework_1/tasks/2.kt
+deleted file mode 100644
+--- a/src/main/kotlin/Homework_1/tasks/2.kt	(revision 03f4b1c5ce78ac78ac828ea9b9b85b75c0d56ac0)
++++ /dev/null	(revision 03f4b1c5ce78ac78ac828ea9b9b85b75c0d56ac0)
+@@ -1,30 +0,0 @@
+-package Homework_1.tasks
+-
+-import Homework_1.Input
+-
+-fun main(){
+-    val mark = Input.writeInt()
+-
+-    val finalMark = when (mark) {
+-        in 0..29 -> {
+-            "Оценка F: 0 .. 29"
+-        }
+-        in 30..49 -> {
+-            "Оценка D: 30 .. 49"
+-        }
+-        in 50..74 -> {
+-            "Оценка C: 50 .. 74"
+-        }
+-        in 75..89 -> {
+-            "Оценка B: 75 .. 89"
+-        }
+-        in 90..100 -> {
+-            "Оценка A: 90 .. 100"
+-        }
+-        else -> {
+-            "Нет такой оценки"
+-        }
+-    }
+-
+-    println(finalMark)
+-}
+\ No newline at end of file
