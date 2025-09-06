@@ -4,7 +4,7 @@ import Homework_3.Size
 import Input
 import kotlin.math.ceil
 import kotlin.math.pow
-
+//new
 fun palindrome(num: Int) {
     val count = Size.getIntSize(num)
 

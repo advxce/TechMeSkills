@@ -7,6 +7,14 @@ object Input {
 
     }
 
+    fun writeRandomArray(startRange:Int, endRange:Int, arraySize:Int):Array<Int>{
+        var array = Array(arraySize){0}
+        for (i in array.indices){
+            array[i] = startRange.rangeTo(endRange).random()
+        }
+        return array
+    }
+
 
 
 }
