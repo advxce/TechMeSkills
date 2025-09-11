@@ -3,7 +3,7 @@ package Homework_3.tasks
 
 import Homework_3.Size
 import Input
-
+//new
 fun findSumUnitDigit(num: Int): Int {
     var newNum = num
     var sum = 0
