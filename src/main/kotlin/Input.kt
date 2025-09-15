@@ -15,6 +15,9 @@ object Input {
         return array
     }
 
-
+    fun writeString():String{
+        val str = readln()
+        return str
+    }
 
 }
