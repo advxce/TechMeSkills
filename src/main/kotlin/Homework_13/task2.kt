@@ -2,7 +2,7 @@ package Homework_13
 
 data class People(val name:String, val age:Int)
 
-fun sortedByDescending(list:List<People>){
+fun mySortedByDescending(list:List<People>){
 
     val resultList = list
         .filter { it.age>18 }
@@ -11,7 +11,11 @@ fun sortedByDescending(list:List<People>){
             println("Output information with apply: $this")
         }
         .let {
-            println("Output information with let $it")
+            println("Output information with let")
+            it.forEach { people->
+                println("age: ${people.age}  name: ${people.name}")
+            }
+
         }
 
 
@@ -26,6 +30,7 @@ fun main(){
 
     )
 
-    sortedByDescending(listPeople)
+
+    mySortedByDescending(listPeople)
 
 }
