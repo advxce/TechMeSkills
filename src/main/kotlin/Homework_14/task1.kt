@@ -26,7 +26,7 @@ fun main(){
 
     val counter = Counter()
 
-
+//
     val firstThread = Thread{
         repeat(10){
             counter.increment()

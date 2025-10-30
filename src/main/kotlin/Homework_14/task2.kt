@@ -26,7 +26,7 @@ fun main(){
 
     firstThread.start()
     secondThread.start()
-
+//
     firstThread.join()
     secondThread.join()
 

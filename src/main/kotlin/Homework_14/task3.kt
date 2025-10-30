@@ -23,7 +23,7 @@ fun main(){
     val obj1 = Any()
 
     val firstThread = Thread{
-
+//
         repeat(10){
             println("Thread First")
             counter.increment(obj1)
